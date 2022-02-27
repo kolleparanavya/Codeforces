@@ -1,0 +1,21 @@
+#include<cstdio>
+int main(){
+    int n,k,count=0,val;
+    scanf("%d%d",&n,&k);
+    int a[n];
+    for(int i=1;i<=n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(int i=1;i<=n;i++){
+        if(i==k){
+            val = a[i];
+        }
+    }
+    for(int i=1;i<=n;i++){
+        if((a[i]>0) && (a[i]>=val)){
+            count = count+1;
+        }
+    }
+    printf("%d",count);
+    return 0;
+}
